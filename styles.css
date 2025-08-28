@@ -1,0 +1,305 @@
+body {
+    background-image: url('WhatsApp Image 2024-09-21 at 20.57.26_d4f01400.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #d2e9bd;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background-color: #cbdfc1cc;
+    padding: 20px 0;
+    color: #13290e;
+    text-align: center;
+    position: relative;
+}
+
+.nav-item {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-item a.login-link {
+    font-size: 1.2rem;
+    color: #181717;
+    display: flex;
+    align-items: center;
+}
+
+.nav-items a {
+    color: #0c0c0c;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+    color: #ff8aa8;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.main {
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    padding: 12px;
+    margin: 10px;
+    width: 220px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    outline: none;
+}
+
+.search-form input::placeholder {
+    color: #ddd;
+}
+
+.search-form button {
+    padding: 12px 24px;
+    background-color: #ff5771;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #d02b55;
+}
+
+.featured-jobs {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.featured-jobs h2 {
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+}
+
+.job-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.job-item {
+    background-color: #fff;
+    color: #333333;
+    padding: 20px;
+    margin: 15px;
+    width: 180px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.job-item:hover {
+    transform: translateY(-10px);
+    background-color: #ff5771;      
+    color: #fff;                   
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+  body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .featured-jobs-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #1575d4;
+        }
+
+        .filter-bar {
+            margin-bottom: 20px;
+        }
+
+        .filter-bar select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .job-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .job-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-card:hover {
+            background-color: #007bff;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .job-card i {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .job-description {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .job-card:hover .job-description {
+            display: block;
+        }
+
+        .badge {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .job-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .job-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+
+
+.footer {
+    background-color: #cbdfc1cc;
+    padding : 40px 0;
+    color : #333;
+    text-align : left;
+    font-family : 'Poppins', sans-serif;
+}
+
+    .h-footer {
+        text-align: center;
+    }
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-column {
+        flex-basis: 30%; 
+        margin-bottom: 20px;
+    }
+    
+    .footer-column h3 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #333;
+    }
+    
+    .footer-column ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-column ul li {
+        margin-bottom: 10px;
+    }
+    
+    .footer-column ul li a {
+        color: #555;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+    
+    .footer-column ul li a:hover {
+        color: #ff5771; 
+    }
+    
+    
+   
+    
+    @media (max-width: 768px) {
+        .footer-column {
+            flex-basis: 100%; 
+            text-align: center;
+        } 
+    }
+    .p {
+        text-align: center;
+    }

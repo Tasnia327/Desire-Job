@@ -1,0 +1,98 @@
+/* Basic page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px;
+    background: url('download.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form group with icon and input */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Input field */
+.form-group input {
+    width: 90%;
+    padding: 10px;
+    padding-left: 40px; /* Adjust to make space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Icon positioning inside input */
+.form-group i {
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Login button */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #bd55b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #661044;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+.back-button {
+    display: block; /* Make it a block element */
+    width:auto;
+    padding: 10px;
+    margin-top: 10px; /* Adding some space above the back button */
+    font-size: 16px;
+    color: rgb(235, 229, 229);
+    background-color: #bd55b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #661044;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+.message {
+    margin-top: 20px;
+    color: red;
+}

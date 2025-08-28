@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('WhatsApp Image 2024-09-27 at 23.50.54_4adb7d2a.jpg') no-repeat center;
+    background-size: cover;
+  }
+  
+  .register-container {
+    width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #fff;
+  }
+  
+  .register-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .input-field {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-field input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .input-field input::placeholder {
+    color: #fff;
+  }
+  
+  .input-field i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .login-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .login-text a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-text a:hover {
+    text-decoration: underline;
+  }
+  

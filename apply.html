@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application</title>
+    <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Apply for Your Desired Job</h1>
+        <nav class="nav-items">
+            <a href="index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="application-form">
+            <h2>Application Form</h2>
+            <form method="POST" action="apply.php" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" required>
+                <button type="submit" class="apply-button">Submit Application</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Desire Job Portal</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="jobs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Jobs</h1>
+        <nav class="nav-items">
+            <a href="Index.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <!-- Search Jobs Section -->
+    <section class="search-jobs">
+        <h2>Search Jobs</h2>
+        <input type="text" id="search-jobs" placeholder="Search jobs...">
+        <ul id="search-suggestions"></ul>
+    </section>
+    <div class="job-filters">
+        <h2>Filter Jobs</h2>
+        <form method="POST" action="jobs.php">
+                <label for="title">Job Title:</label>
+                <input type="text" id="title" name="title" required><br>
+            
+                <label for="type">Job Type:</label>
+                <select id="type" name="type" required>
+                    <option value="full-time">Full-Time</option>
+                    <option value="part-time">Part-Time</option>
+                    <option value="contract">Contract</option>
+                </select><br>
+            
+              
+                <label for="salary">Expected-Salary:</label> 
+                
+<select input type="number" id="salary" name="salary" required>
+
+    <option value="all">All</option>
+    <option value="50000">50,000</option>
+    <option value="100000">80,000</option>
+    <option value="100000+">100,000+</option>
+</select>
+<label for="experience">Experience Level:</label>
+            <select id="experience" name="experience">
+                <option value="junior-level">Junior-Level</option>
+                <option value="mid-level">Mid-Level</option>
+                <option value="high-level">High-Level</option>
+            </select>
+
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required><br>
+            
+                <label for="company">Company Name:</label>
+                <input type="text" id="company" name="company" required><br>
+            
+                <button type="submit">Submit</button>
+            
+            </form>
+    </div>    
+<!-- Job Listings Section -->
+<section class="job-listing">
+    <h2>Available Jobs</h2>
+    <div id="job-results"></div>
+</section>
+</main>
+<footer class="footer">
+    <div class="h-footer">
+<h3>DESIRE JOBS</h3>
+<P>YOUR GETWAY TO A BETTER CAREER</P>
+    </div>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <a href="Index.html">Home</a>
+                    <br>
+                    <a href="about.html">About</a>
+                    <br>
+                    <a href="jobs.html">Jobs</a>
+                    <br>
+                    <a href="contact.html">Contact</a>
+                </ul>
+            </div> 
+            <div class="footer-column">
+                <h3>Extra Links</h3>
+                <ul>  
+                    <a href="login.html" class="login-link"><i class='bx bxs-user'></i>Login </a>
+                    <br>
+                    <a href="register.html">Register</a>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                    <br>
+<a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+<br>
+<a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>  
+                </ul>
+            </div>
+        </div>
+    <div class="p"><p>© 2024 Desire Job Portal</p></div>
+</footer>
+<script>
+// Sample jobs data
+// Expanded Sample Jobs Data with Levels
+const jobs = [
+    // Graphic Designer
+    { title: 'Graphic Designer', type: 'full-time', salary: 45000, experience: 'junior-level', location: 'New York', company: 'DesignPro' },
+    { title: 'Graphic Designer', type: 'full-time', salary: 65000, experience: 'mid-level', location: 'New York', company: 'DesignPro' },
+    { title: 'Graphic Designer', type: 'full-time', salary: 90000, experience: 'senior-level', location: 'New York', company: 'DesignPro' },
+    // Software Developer
+    { title: 'Software Developer', type: 'part-time', salary: 60000, experience: 'junior-level', location: 'San Francisco', company: 'TechSoft' },
+    { title: 'Software Developer', type: 'part-time', salary: 85000, experience: 'mid-level', location: 'San Francisco', company: 'TechSoft' },
+    { title: 'Software Developer', type: 'part-time', salary: 120000, experience: 'senior-level', location: 'San Francisco', company: 'TechSoft' },
+    // Content Writer
+    { title: 'Content Writer', type: 'contract', salary: 25000, experience: 'junior-level', location: 'Remote', company: 'WriteIt' },
+    { title: 'Content Writer', type: 'contract', salary: 40000, experience: 'mid-level', location: 'Remote', company: 'WriteIt' },
+    { title: 'Content Writer', type: 'contract', salary: 60000, experience: 'senior-level', location: 'Remote', company: 'WriteIt' },
+    // Marketing Manager
+    { title: 'Marketing Manager', type: 'full-time', salary: 80000, experience: 'junior-level', location: 'Chicago', company: 'MarketGenius' },
+    { title: 'Marketing Manager', type: 'full-time', salary: 120000, experience: 'mid-level', location: 'Chicago', company: 'MarketGenius' },
+    { title: 'Marketing Manager', type: 'full-time', salary: 150000, experience: 'senior-level', location: 'Chicago', company: 'MarketGenius' },
+    // UX/UI Designer
+    { title: 'UX/UI Designer', type: 'full-time', salary: 40000, experience: 'junior-level', location: 'Boston', company: 'CreativeLabs' },
+    { title: 'UX/UI Designer', type: 'full-time', salary: 55000, experience: 'mid-level', location: 'Boston', company: 'CreativeLabs' },
+    { title: 'UX/UI Designer', type: 'full-time', salary: 80000, experience: 'senior-level', location: 'Boston', company: 'CreativeLabs' },
+    // Data Analyst
+    { title: 'Data Analyst', type: 'full-time', salary: 50000, experience: 'junior-level', location: 'Austin', company: 'DataPros' },
+    { title: 'Data Analyst', type: 'full-time', salary: 70000, experience: 'mid-level', location: 'Austin', company: 'DataPros' },
+    { title: 'Data Analyst', type: 'full-time', salary: 95000, experience: 'senior-level', location: 'Austin', company: 'DataPros' },
+    // Project Manager
+    { title: 'Project Manager', type: 'contract', salary: 65000, experience: 'junior-level', location: 'Seattle', company: 'BuildIt' },
+    { title: 'Project Manager', type: 'contract', salary: 95000, experience: 'mid-level', location: 'Seattle', company: 'BuildIt' },
+    { title: 'Project Manager', type: 'contract', salary: 130000, experience: 'senior-level', location: 'Seattle', company: 'BuildIt' },
+    // IT Support Engineer
+    { title: 'IT Support Engineer', type: 'full-time', salary: 40000, experience: 'junior-level', location: 'Atlanta', company: 'ITFixers' },
+    { title: 'IT Support Engineer', type: 'full-time', salary: 50000, experience: 'mid-level', location: 'Atlanta', company: 'ITFixers' },
+    { title: 'IT Support Engineer', type: 'full-time', salary: 70000, experience: 'senior-level', location: 'Atlanta', company: 'ITFixers' },
+    // Mobile App Developer
+    { title: 'Mobile App Developer', type: 'contract', salary: 60000, experience: 'junior-level', location: 'San Diego', company: 'AppMakers' },
+    { title: 'Mobile App Developer', type: 'contract', salary: 75000, experience: 'mid-level', location: 'San Diego', company: 'AppMakers' },
+    { title: 'Mobile App Developer', type: 'contract', salary: 100000, experience: 'senior-level', location: 'San Diego', company: 'AppMakers' },
+    // Sales Representative
+    { title: 'Sales Representative', type: 'full-time', salary: 30000, experience: 'junior-level', location: 'Houston', company: 'SalesForceX' },
+    { title: 'Sales Representative', type: 'full-time', salary: 48000, experience: 'mid-level', location: 'Houston', company: 'SalesForceX' },
+    { title: 'Sales Representative', type: 'full-time', salary: 70000, experience: 'senior-level', location: 'Houston', company: 'SalesForceX' },
+    // Cybersecurity Analyst
+    { title: 'Cybersecurity Analyst', type: 'contract', salary: 70000, experience: 'junior-level', location: 'Remote', company: 'SecureNet' },
+    { title: 'Cybersecurity Analyst', type: 'contract', salary: 95000, experience: 'mid-level', location: 'Remote', company: 'SecureNet' },
+    { title: 'Cybersecurity Analyst', type: 'contract', salary: 130000, experience: 'senior-level', location: 'Remote', company: 'SecureNet' },
+    // Receptionist
+    { title: 'Receptionist', type: 'part-time', salary: 20000, experience: 'junior-level', location: 'Orlando', company: 'WelcomeDesk' },
+    { title: 'Receptionist', type: 'part-time', salary: 30000, experience: 'mid-level', location: 'Orlando', company: 'WelcomeDesk' },
+    { title: 'Receptionist', type: 'part-time', salary: 40000, experience: 'senior-level', location: 'Orlando', company: 'WelcomeDesk' },
+    // DevOps Engineer
+    { title: 'DevOps Engineer', type: 'contract', salary: 80000, experience: 'junior-level', location: 'Boston', company: 'CloudOps' },
+    { title: 'DevOps Engineer', type: 'contract', salary: 110000, experience: 'mid-level', location: 'Boston', company: 'CloudOps' },
+    { title: 'DevOps Engineer', type: 'contract', salary: 150000, experience: 'senior-level', location: 'Boston', company: 'CloudOps' },
+    { title: 'Chef', type: 'contract', salary: 60000, experience: 'junior-level', location: 'Chittagong,Bangladesh', company: 'Chomok' },
+    { title: 'Chef', type: 'contract', salary: 75000, experience: 'mid-level', location: 'Khulna,Bangladesh', company: 'Burger Lab' },
+    { title: 'Chef', type: 'contract', salary: 100000, experience: 'senior-level', location: 'Dhaka,Bangladesh', company: 'Radison Blu' },
+
+];
+// Function to render jobs dynamically
+function renderJobs(jobList) {
+    const jobResults = document.getElementById('job-results');
+    jobResults.innerHTML = ''; // Clear previous results
+
+    if (jobList.length === 0) {
+        jobResults.innerHTML = '<p>No jobs found matching your criteria.</p>';
+        return;
+    }
+
+    jobList.forEach(job => {
+        jobResults.innerHTML += `
+            <div class="job-card">
+                <h3>${job.title}</h3>
+                <p><strong>Type:</strong> ${job.type}</p>
+                <p><strong>Salary:</strong> $${job.salary}</p>
+                <p><strong>Experience:</strong> ${job.experience}</p>
+                <p><strong>Location:</strong> ${job.location}</p>
+                <p><strong>Company:</strong> ${job.company}</p>
+                <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+        `;
+    });
+}
+
+// Live search function
+function liveSearch() {
+    const searchInput = document.getElementById('search-jobs').value.toLowerCase().trim();
+    const suggestionsList = document.getElementById('search-suggestions');
+
+    // Clear previous suggestions
+    suggestionsList.innerHTML = '';
+
+    // Filter jobs based on search input
+    const filteredJobs = jobs.filter(job =>
+        job.title.toLowerCase().includes(searchInput) ||
+        job.location.toLowerCase().includes(searchInput) ||
+        job.company.toLowerCase().includes(searchInput)
+    );
+
+    // Render suggestions dynamically
+    if (searchInput) {
+        filteredJobs.forEach(job => {
+            const suggestionItem = document.createElement('li');
+            suggestionItem.textContent = `${job.title} - ${job.company} (${job.location})`;
+            suggestionItem.classList.add('suggestion-item');
+
+            suggestionItem.addEventListener('click', () => {
+                document.getElementById('search-jobs').value = job.title; // Populate input field
+                suggestionsList.innerHTML = ''; // Clear suggestions
+                renderJobs([job]); // Show job details
+            });
+
+            suggestionsList.appendChild(suggestionItem);
+        });
+    }
+
+    // Render filtered jobs dynamically in the job results section
+    renderJobs(filteredJobs);
+}
+
+// Attach event listener for live search
+document.getElementById('search-jobs').addEventListener('input', liveSearch);
+
+// Initial render of all jobs on page load
+renderJobs(jobs);
+</script>
+</body>
+</html>

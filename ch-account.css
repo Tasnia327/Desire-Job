@@ -1,0 +1,110 @@
+ /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light cyan background for a fresh look */
+}
+
+/* Header styles */
+.header {
+    background-color: #00796b; /* Teal background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+.nav-items {
+    margin-top: 10px;
+}
+
+.nav-items a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+.nav-items a:hover {
+    text-decoration: underline;
+}
+/* Main content styles */
+.main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+.job-listing h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.job-listing ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.job-listing li {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #b2dfdb; /* Light teal background for job items */
+    border-left: 5px solid #00796b; /* Teal border */
+    border-radius: 5px; /* Rounded corners for job items */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.job-listing li:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    background-color: #80cbc4; /* Darker teal on hover */
+}
+
+.job-listing h3 {
+    margin: 0;
+    color: #004d40; /* Darker teal */
+    font-size: 1.5rem;
+}
+
+.job-listing p {
+    margin: 5px 0;
+    color: #00695c; /* Medium teal for descriptions */
+}
+
+.job-listing p strong {
+    color: #004d40;
+}
+/* Apply Now button styles */
+.apply-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #2980b9; /* Blue button */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #1f6396; /* Darker blue on hover */
+}
+/* Footer styles */
+.footer {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 0;
+}
